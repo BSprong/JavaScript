@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Service</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/standaard.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/formvalidator.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $("#accordion").accordion();
+  });
+  </script>
+</head>
+<body onload="volgendeFoto()">
+
+<div id="content">
+
+<div id="accordion">
+	<h3><a href="#">slideshow</a></h3>
+	<div>
+		<p>
+  <div align="center">
+<p>
+<img src="photo1.jpg" width="500" height="300" alt="afbeelding" name="img1" border= "0" /></p>
+
+
+</div>
+		</p>
+	</div>
+	
+	<h3><a href="#">API - YouTube</a></h3>
+	<div>
+     <iframe title="YouTube video player" width="560" height="349" src="http://www.youtube.com/embed/EdkQUEpLHdk" frameborder="0" allowfullscreen></iframe>
+		
+	</div>
+	<h3><a href="#">Google Maps</a></h3>
+	<div>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=nl&amp;msa=0&amp;msid=204539751704484757415.00049f9fa457d7fd980bf&amp;ll=51.448337,5.479517&amp;spn=0.018722,0.036478&amp;z=14&amp;output=embed"></iframe><br /><small><a href="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=nl&amp;msa=0&amp;msid=204539751704484757415.00049f9fa457d7fd980bf&amp;ll=51.448337,5.479517&amp;spn=0.018722,0.036478&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left">Mijn opgeslagen plaatsen</a> weergeven op een grotere kaart</small>
+	</div>
+</div>
+
+
+
+<h1>formuliervalidatie</h1>
+<h2>Service</h2>
+  <div class="node ">
+    <div class="node_content" id="test"> <span class='print-link'></span>
+      <p>Met dit formulier kunt u informatiepaketten aanvragen of contact opnemen met verschillende afdelingen van het Landelijk Bureau, onder andere voor het doorgeven van een adreswijziging.</p>
+      <p>U ontvangt een kopie van uw bericht in uw mailbox.</p>
+      <p>Velden met een * zijn verplicht.</p>
+      <form accept-charset="UTF-8" method="post" id="form1" class="webform" name="form1" onsubmit="validat(event)" >
+        <fieldset class="wf-fieldset" id="ontvanger">
+          <legend>Ontvanger</legend>
+          <div class="form-item">
+            <label>Bericht versturen aan: <span class="form-required" title="Dit veld is verplicht.">*</span></label>
+            <label class="option">
+              <input type="radio" name="doel" value="1" class="form-radio" />
+              Ledenadministratie (onder andere voor een adreswijziging)</label>
+            <label class="option">
+              <input type="radio" name="doel" value="2" class="form-radio" />
+              Bestuur</label>
+            <label class="option">
+              <input type="radio" name="doel" value="3"   class="form-radio" />
+              Webteam, verantwoordelijk voor deze site</label>
+            <label class="option">
+              <input type="radio" name="doel" value="4"   class="form-radio" />
+              Postkamer voor het aanvragen van informatiepakketten</label>
+            <label class="option">
+              <input type="radio" name="doel" value="5"   class="form-radio" />
+              Receptie van het Landelijk Bureau voor alle overige opmerkingen en vragen</label>
+          </div>
+        </fieldset>
+        <fieldset class="wf-fieldset" id="onderwerp">
+          <legend>Onderwerp</legend>
+          <div class="form-item">
+            <div class="description">
+              <p>Beschrijf zo nauwkeurig mogelijk het onderwerp van het bericht. 
+                Zo kan de ontvanger het beter afhandelen.</p>
+            </div>
+            <label>Onderwerp van uw bericht: <span class="form-required" title="Dit veld is verplicht.">*</span></label>
+            <label class="option">
+              <input type="radio" name="onderwerp_van_uw_bericht" value="Adreswijziging"   class="form-radio" />
+              Adreswijziging</label>
+            <label class="option">
+              <input type="radio" name="onderwerp_van_uw_bericht" value="Aanvragen informatiepakket voor scholieren of studenten"   class="form-radio" />
+              Aanvragen informatiepakket voor scholieren of studenten</label>
+            <label class="option">
+              <input type="radio" name="onderwerp_van_uw_bericht" value="Aanvragen algemeen informatiepakket"   class="form-radio" />
+              Aanvragen algemeen informatiepakket</label>
+            <label class="option">
+              <input type="radio" name="onderwerp_van_uw_bericht" value="Overig (hieronder invullen)"   class="form-radio" />
+              Overig (hieronder invullen)</label>
+            <label for="aanvulling-op-onderwerp">Aanvulling op onderwerp: </label>
+            <input type="text" maxlength="128" name="aanvulling_op_onderwerp" id="aanvulling-op-onderwerp"  size="60" class="form-text" />
+          </div>
+        </fieldset>
+        <fieldset class="wf-fieldset" id="bericht">
+        
+          <legend>Bericht</legend>
+          <div class="form-item">
+            <label for="bericht">De inhoud van uw bericht: <span class="form-required" title="Dit veld is verplicht.">*</span></label>
+            <textarea cols="60" rows="10" name="empty" id="berichtText"  class="form-textarea resizable required"></textarea>
+          </div>
+        </fieldset>
+        
+        <fieldset class="wf-fieldset" id="afzender">
+          <legend>Afzender</legend>
+          <div class="form-item" id="email">
+            <div class="description">
+              <p>Vul uw eigen gegevens zo volledig mogelijk in, des te beter kunnen we u van dienst zijn.</p>
+            </div>
+            <label for="naam">Naam: <span class="form-required" title="Dit veld is verplicht.">*</span></label>
+            <input type="text" maxlength="128" name="naam" id="naam"  size="60" class="form-text-required" value="" />
+            
+             <p>E-mail adres</p>
+            <input name="email" id="email" type="text" size="60" />
+            
+            <label for="telefoonnummer">Telefoonnummer: </label>
+            <input name="limitedtextfield" type="text" onkeydown="limitedtextfield" onKeyUp=  "limitText(this.form.limitedtextfield,this.form.countdown,10);" maxlength="11" name="telefoon" id="telefoonnummer"  size="11" value="" class="form-text"/> <font size="1">(Maximum cijfers: 10) Jij hebt <input readonly type="text" name="countdown" size="3" value="10"> over om te typen.   </font>
+<br /><br />
+
+            
+            <label for="adres">Adres: </label>
+            <input type="text" maxlength="128" name="adres" id="adres"  size="60" value="" class="form-text" />
+            
+            <label for="postcode">Postcode: </label>
+            <input type="text" maxlength="6" name="postcode" id="postcode"  size="6" value="" class="form-text" />
+            
+            <label for="woonplaats">Woonplaats: </label>
+            <input type="text" maxlength="128" name="woonplaats" id="woonplaats"  size="60" value="" class="form-text" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <input name="submin" type="submit" value="Versturen">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Flogin.php&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+</div>
+</body>
+</html>
